@@ -6,7 +6,6 @@ import './assets/styles/styles.scss'
 
 
 Vue.config.productionTip = false
-
 new Vue({
   render: h => h(App),
   store, router

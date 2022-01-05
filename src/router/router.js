@@ -1,25 +1,42 @@
 import Vue from "vue"
-import Router from "vue-router"
+import VueRouter from "vue-router"
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-import Catalog from "../components/catalog"
-import Card from "../components/card";
-
-let router = new Router({
-    routes: [
+let routes = [
         {
             path: '/',
             name: 'catalog',
-            component: Catalog,
+            component: () => import("../components/catalog"),
         },
         {
             path: '/cart',
             name: 'cart',
-            component: Card,
+            component: () => import("../components/card"),
             props: true
+        },
+        {
+            path: '/checkout',
+            name: 'v-checkout',
+            component: () => import("../components/v-checkout")
+        },
+        {  path: '/product/:id',
+           name: 'ProductsCard',
+           component: () => import("../components/products-card"),
+           props: true
+        },
+        {  path: '/:catchAll(.*)',
+            name: 'NotFound',
+            component: () =>  import("../components/not-found")
         }
-    ]
-})
 
-export default router;
+    ]
+
+export default new VueRouter({
+    mode: 'history',
+    routes,
+    scrollBehavior() {
+        return { x: 0, y: 0 };
+    }
+
+});

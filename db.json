@@ -1,0 +1,47 @@
+{
+  "products": [
+    {
+      "image": "https://via.placeholder.com/150x250",
+      "title": "Product 1",
+      "price": 100,
+      "article": "PR1",
+      "availible": true
+    },
+    {
+      "image": "https://via.placeholder.com/150x250",
+      "title": "Product 2",
+      "price": 200,
+      "article": "PR2",
+      "availible": true
+    },
+    {
+      "image": "https://via.placeholder.com/150x250",
+      "title": "Product 3",
+      "price": 300,
+      "article": "PR3",
+      "availible": false
+    },
+    {
+      "image": "https://via.placeholder.com/150x250",
+      "title": "Product 4",
+      "price": 400,
+      "article": "PR4",
+      "availible": true
+    },
+    {
+      "image": "https://via.placeholder.com/150x250",
+      "title": "Product 5",
+      "price": 500,
+      "article": "PR5",
+      "availible": false
+    },
+    {
+      "image": "https://via.placeholder.com/150x250",
+      "title": "Product 6",
+      "price": 600,
+      "article": "PR6",
+      "availible": true
+    }
+  ]
+
+}
