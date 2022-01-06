@@ -56,7 +56,7 @@ export default{
     },
     metaInfo() {
       const product_title = "Олаплекс (Olaplex) Для Волос Купить В Интернет-Магазине";
-      const product_desc = "Олаплекс (Olaplex) Для Волос Купить В Интернет-Магазине";
+      const product_desc = "Средства для волос Olaplex (Олаплекс) для домашнего использования можно заказать у нас! Отличные цены, доставка по всей территории России!";
       return {
         title: `${product_title}`,
         titleTemplate: '%s',

@@ -71,6 +71,21 @@ export default{
      data() {
         return { }
     },
+  metaInfo() {
+    const product_title = "Корзина товаров";
+    const product_desc = "Средства для волос Olaplex (Олаплекс) для домашнего использования можно заказать у нас! Отличные цены, доставка по всей территории России!";
+    return {
+      title: `${product_title}`,
+      titleTemplate: '%s - Олаплекс (Olaplex) Для Волос Купить В Интернет-Магазине',
+      meta: [
+        { name: 'description', content:  `${product_desc}`},
+        { property: 'og:title', content: `${product_title}`},
+        { property: 'og:site_name', content: 'Олаплекс (Olaplex)'},
+        {property: 'og:type', content: 'website'},
+        {name: 'robots', content: 'index,follow'}
+      ]
+    }
+  },
     computed:{
       card_Total_Cost() {
         let result = []
