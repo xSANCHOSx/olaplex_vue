@@ -25,17 +25,17 @@
           <div class="flexslider" id="slider">
             <ul class="slides">
               <li id="slide1">
-                <img src="images/bg.png">
+                <img src="../../assets/images/bg.png">
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/NKfTbACBRfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
               </li>
 
               <li id="slide2">
-                <img src="images/poster.png">
+                <img src="../../assets/images/poster.png">
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/NKfTbACBRfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
               </li>
             </ul>
           </div>
-          <!--<img src="images/bg.png">
+          <!--<img src="../../assets/images/bg.png">
            <iframe width="560" height="328" src="https://www.youtube.com/embed/e80xWGah3PM?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
         </div>
       </div>

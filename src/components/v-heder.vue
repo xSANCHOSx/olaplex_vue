@@ -12,7 +12,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/">
-            <img id="logo" src="images/logo.png" alt="Olaplex Logo">
+            <img id="logo" src="../assets/images/logo.png" alt="Olaplex Logo">
           </a>
 
         </div>
@@ -29,14 +29,14 @@
           <div class="number navbar-brand hidden-sm hidden-xs"><a href="tel:+74950322929">+7 (495) 032-29-29</a></div>
           <router-link :to="{ name: 'cart'}">
           <div class="cart visible-lg visible-md cart_full">
-            <img src="images/basket.png" /><span class="basketwidjet2">({{ CARD.length }})</span>
+            <img src="../assets/images/basket.png" /><span class="basketwidjet2">({{ CARD.length }})</span>
           </div>
           </router-link>
         </div>
         <div class="number navbar-brand hidden-md hidden-lg"><a href="tel:+74950322929">+7 (495) 032-29-29</a></div>
         <router-link :to="{ name: 'cart'}">
           <div class="cart catalog__link_to_card visible-sm visible-xs cart_mobile">
-            <img src="images/basket.png" /><span class="basketwidjet2">({{ CARD.length }})</span>
+            <img src="../assets/images/basket.png" /><span class="basketwidjet2">({{ CARD.length }})</span>
           </div>
         </router-link>
         <!-- /.navbar-collapse -->

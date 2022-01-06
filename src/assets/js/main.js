@@ -257,18 +257,6 @@ $("#max-featured-section").each(function() {
         );
     });
 });
-var googleViewItem = [];
-gtag('event', 'view_item', {
-    "items": googleViewItem
-});
-var yaDetail = [];
-dataLayer.push({
-    "ecommerce": {
-        "detail": {
-            "products": yaDetail
-        }
-    }
-});
 
 // Событие при клике на добавить в корзину
 $(".tovar-name").each(function() {
@@ -315,17 +303,4 @@ $(".tovar-name").each(function() {
         );
     });
 });
-// google аналитика
-var googleAddToCart = [];
-gtag('event', 'add_to_cart', {
-    "items": googleAddToCart
-});
-// yandex аналитика
-var yaAddToCart = [];
-dataLayer.push({
-    "ecommerce": {
-        "add": {
-            "products": yaAddToCart
-        }
-    }
-});
+

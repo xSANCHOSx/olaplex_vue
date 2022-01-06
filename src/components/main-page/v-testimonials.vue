@@ -19,7 +19,7 @@
                 <div class="item active">
                   <div class="row">
                     <div class="col-sm-2 col-sm-offset-2  col-xs-12 testimonial-box">
-                      <img class="img-responsive " src="images/test1.png" alt="Profile 1">
+                      <img class="img-responsive " src="../../assets/images/test1.png" alt="Profile 1">
                     </div>
                     <div class="col-sm-6 col-xs-12 testimonial-box">
                       <h2 class="name">Татьяна</h2>
@@ -38,7 +38,7 @@
                 <div class="item">
                   <div class="row">
                     <div class="col-sm-2 col-sm-offset-2 col-xs-12 testimonial-box">
-                      <img class="img-responsive " src="images/test2.png" alt="Profile 2">
+                      <img class="img-responsive " src="../../assets/images/test2.png" alt="Profile 2">
                     </div>
                     <div class="col-sm-6 col-xs-12 testimonial-box">
                       <h2 class="name">Анна</h2>
@@ -56,7 +56,7 @@
                 <div class="item">
                   <div class="row">
                     <div class="col-sm-2 col-sm-offset-2 col-xs-12 testimonial-box">
-                      <img class="img-responsive " src="images/test3.png" alt="Profile 3">
+                      <img class="img-responsive " src="../../assets/images/test3.png" alt="Profile 3">
                     </div>
                     <div class="col-sm-6 col-xs-12 testimonial-box">
                       <h2 class="name">Ольга</h2>

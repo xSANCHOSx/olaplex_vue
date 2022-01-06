@@ -23,6 +23,7 @@ export default{
             title: "main-wrapper"
         }
     },
+
     computed:{},
     methods:{},
     watch:{},

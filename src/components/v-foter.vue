@@ -10,25 +10,25 @@
         <div class="col-md-9 col-xs-12">
           <nav class="navbar navbar-default ">
             <ul class="nav navbar-nav main">
-              <li><a href="#max-aboutus-section">Что это?</a></li>
-              <li><a href="#max-featured-section">Продукция</a></li>
-              <li><a href="#max-work-section">Как использовать</a></li>
+              <li><a href="/#max-aboutus-section">Что это?</a></li>
+              <li><a href="/#max-featured-section">Продукция</a></li>
+              <li><a href="/#max-work-section">Как использовать</a></li>
               <li><a href="delivery.html">Доставка и оплата</a></li>
               <li><a href="info.html">Справка</a></li>
-              <li><a href="/hair_perfector.html">No.3 Hair Perfector</a></li>
-              <li><a href="/bond_perfector.html">No.2 Bond Perfector</a></li>
-              <li><a href="/bond_multiplier.html">No.1 Bond Multiplier</a></li>
-              <li><a href="/traveling_stylist_kit.html">Traveling Stylist Kit</a></li>
-              <li><a href="/salon_intro_kit.html">Salon Intro Kit</a></li>
-              <li><a href="/bond_maintenance_shampoo.html">No.4 Bond Maintenance Shampoo 250 ml</a></li>
-              <li><a href="/bond_maintenance_shampoo_2000.html">No.4 Bond Maintenance Shampoo 2000 ml</a></li>
-              <li><a href="/bond_maintenance_conditioner.html">No.5 Bond Maintenance Conditioner 250 ml</a></li>
-              <li><a href="/bond_maintenance_conditioner_2000.html">No.5 Bond Maintenance Conditioner 2000 ml</a></li>
-              <li><a href="/bond_smoother.html">No.6 Bond Smoother</a></li>
-              <li><a href="/bonding_oil.html">No.7 Bonding Oil </a></li>
-              <li><a href="/bond_intense_moisture_mask.html">No.8 Bond Intense Moisture Mask </a></li>
-              <li><a href="/hair_perfector_0.html">No.0 Hair Treatment</a></li>
-              <li><a href="/hair_perfector_03.html">No.3 Hair Perfector 250ml</a></li>
+              <li><router-link to="/product/1">No.3 Hair Perfector</router-link></li>
+              <li><router-link to="/product/2">No.2 Bond Perfector</router-link></li>
+              <li><router-link to="/product/3">No.1 Bond Multiplier</router-link></li>
+              <li><router-link to="/product/4">Traveling Stylist Kit</router-link></li>
+              <li><router-link to="/product/5">Salon Intro Kit</router-link></li>
+              <li><router-link to="/product/6">No.4 Bond Maintenance Shampoo 250 ml</router-link></li>
+              <li><router-link to="/product/12">No.4 Bond Maintenance Shampoo 2000 ml</router-link></li>
+              <li><router-link to="/product/7">No.5 Bond Maintenance Conditioner 250 ml</router-link></li>
+              <li><router-link to="/product/13">No.5 Bond Maintenance Conditioner 2000 ml</router-link></li>
+              <li><router-link to="/product/8">No.6 Bond Smoother</router-link></li>
+              <li><router-link to="/product/9">No.7 Bonding Oil </router-link></li>
+              <li><router-link to="/product/15">No.8 Bond Intense Moisture Mask </router-link></li>
+              <li><router-link to="/product/10">No.0 Hair Treatment</router-link></li>
+              <li><router-link to="/product/11">No.3 Hair Perfector 250ml</router-link></li>
               <li class="hidden-md hidden-lg"><a href='tel:+74950322929'>+7 (495) 032-29-29</a></li>
               <li class="hidden-md hidden-lg"><a href="mailto:admin@olaplex-shop.ru">admin@olaplex-shop.ru</a><a href="mailto:client@olaplex-shop.ru">client@olaplex-shop.ru</a></li>
             </ul>

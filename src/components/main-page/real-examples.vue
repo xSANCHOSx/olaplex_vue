@@ -9,7 +9,7 @@
         <div class="col-md-4 col-xs-12">
           <div class="member-box animate--one" data-animate="zoomIn">
             <div class="member-profile">
-              <img src="images/5.png" alt="Member 1">
+              <img src="../../assets/images/5.png" alt="Member 1">
             </div>
 
           </div>
@@ -17,7 +17,7 @@
         <div class="col-md-4 col-xs-12">
           <div class="member-box animate--one" data-animate="zoomIn">
             <div class="member-profile">
-              <img src="images/6.jpg" alt="Member 1">
+              <img src="../../assets/images/6.jpg" alt="Member 1">
             </div>
           </div>
         </div>
@@ -25,7 +25,7 @@
 
           <div class="member-box animate--one" data-animate="zoomIn">
             <div class="member-profile">
-              <img src="images/5.png" alt="Member 1">
+              <img src="../../assets/images/5.png" alt="Member 1">
             </div>
           </div>
         </div>

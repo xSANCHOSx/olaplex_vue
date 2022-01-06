@@ -1,13 +1,15 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
+import VueMeta from "vue-meta";
 
 Vue.use(VueRouter);
+Vue.use(VueMeta);
 
 let routes = [
         {
             path: '/',
             name: 'catalog',
-            component: () => import("../components/catalog"),
+            component: () => import("../components/catalog")
         },
         {
             path: '/cart',
@@ -31,6 +33,8 @@ let routes = [
         }
 
     ]
+
+Vue.config.productionTip = false
 
 export default new VueRouter({
     mode: 'history',

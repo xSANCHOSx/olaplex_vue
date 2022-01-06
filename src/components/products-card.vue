@@ -1,5 +1,5 @@
 <template>
-  <section class="max-featured">
+  <section class="max-featured" >
     <div class="max-section-title product">
       <h2><strong>{{prod.catalog_number }}</strong><br />  {{prod.name }}</h2>
     </div>
@@ -42,12 +42,29 @@ export default {
     prod_data:{
       type: Object,
       default() {
-        return {}
+        return {
+
+        }
       }
     }
   },
   data() {
     return {}
+  },
+  metaInfo() {
+    const product_title = this.prod.catalog_number + ' ' + this.prod.name;
+    return {
+      title: `${product_title}`,
+      titleTemplate: '%s - Олаплекс (Olaplex) Для Волос Купить В Интернет-Магазине',
+      meta: [
+        { name: 'description', content:  'Средства для волос Olaplex (Олаплекс) для домашнего использования можно ' +
+              'заказать у нас! Отличные цены, доставка по всей территории России!'},
+        { property: 'og:title', content: `${product_title}`},
+        { property: 'og:site_name', content: 'Олаплекс (Olaplex)'},
+        {property: 'og:type', content: 'website'},
+        {name: 'robots', content: 'index,follow'}
+      ]
+    }
   },
   computed: {
     prod () {
@@ -55,6 +72,7 @@ export default {
     }
   },
   methods:{
+
      ...mapActions([
          'ADD_TO_CARD'
      ]),
@@ -68,6 +86,7 @@ export default {
 
   mounted() {
     this.$set(this.prod,'quantity', 1);
+
   }
 }
 

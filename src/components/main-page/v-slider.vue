@@ -9,13 +9,13 @@
               <div class="flex-caption_l">
                 <span><!--Гарантия Защиты Волос--></span>
               </div>
-              <img src="images/1.jpg" />
+              <img src="../../assets/images/1.jpg" />
               <div class="flex-caption_r">
                 <span><!--Один Ингридиент меняет все--></span>
               </div>
             </li>
             <li>
-              <img src="images/23.png" />
+              <img src="../../assets/images/23.png" />
             </li>
           </ul>
         </div>

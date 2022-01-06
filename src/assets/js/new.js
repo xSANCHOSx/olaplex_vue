@@ -62,41 +62,12 @@ $(function () {
         }
     });
 });
-////////////////
-$(document).ready(function(){
-    $('#order .close_popup').click(function (){
-        $('#formToSend input:checkbox').removeAttr("checked");
-        $("#formToSend input[type=submit]").attr('disabled','disabled');
-        $('#formToSend input[type=hidden].valTrFal').val('valTrFal_disabled');
-    });
-    $(function () {
-        $('#formToSend input:checkbox').change(function() {
-            if($(this).is(':checked')){
-                $("#formToSend input[type=submit]").removeAttr('disabled');
-                $('#formToSend input[type=hidden].valTrFal').val('valTrFal_true');
-            }
-            else {
-                $("#formToSend input[type=submit]").attr('disabled','disabled');
-                $('#formToSend input[type=hidden].valTrFal').val('valTrFal_disabled');
-            }
-        });
-    });
-    $('#send').click(function (){
-        if(( $("#formToSend input[type=text]").val())==!""){
-            $('#formToSend input[type=hidden].valTrFal').remove();
-            $('#formToSend .font-geometria-light').remove();
-            $('#overflw .basket_num_buttons').remove();
 
-        }});
-});
-///////////////
 $(window).load(function(){
     $('.flexslider').flexslider({
         animation: "slide"
     });
 });
-$('#phoneNumber').inputmask("+7(999)999-99-99");
-
 $(function() {
     var videos  = $("#slide1");
 

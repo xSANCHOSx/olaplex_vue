@@ -11,7 +11,7 @@
             <div class="col-sm-4 col-xs-12">
               <div class="member-box animate--one" data-animate="zoomIn">
                 <div class="member-profile star">
-                  <img src="images/kim.jpg" alt="Member 1">
+                  <img src="../../assets/images/kim.jpg" alt="Member 1">
                   <h2>KIM KARDASHIAN</h2>
                 </div>
 
@@ -20,7 +20,7 @@
             <div class="col-sm-4 col-xs-12">
               <div class="member-box animate--one" data-animate="zoomIn">
                 <div class="member-profile star">
-                  <img src="images/khloe.jpg" alt="Member 2">
+                  <img src="../../assets/images/khloe.jpg" alt="Member 2">
                   <h2>KHLOE KARDASHIAN</h2>
                 </div>
               </div>
@@ -28,7 +28,7 @@
             <div class="col-sm-4 col-xs-12">
               <div class="member-box animate--one" data-animate="zoomIn">
                 <div class="member-profile star">
-                  <img src="images/jlo.jpg" alt="Member 3">
+                  <img src="../../assets/images/jlo.jpg" alt="Member 3">
                   <h2>JENNIFER LOPEZ</h2>
                 </div>
               </div>
@@ -38,7 +38,7 @@
             <div class="col-sm-4 col-xs-12">
               <div class="member-box animate--one" data-animate="zoomIn">
                 <div class="member-profile star">
-                  <img src="images/gwenth.jpg" alt="Member 4">
+                  <img src="../../assets/images/gwenth.jpg" alt="Member 4">
                   <h2>GWYNETH PALTROW</h2>
                 </div>
 
@@ -47,7 +47,7 @@
             <div class="col-sm-4 col-xs-12">
               <div class="member-box animate--one" data-animate="zoomIn">
                 <div class="member-profile star">
-                  <img src="images/theron.jpg" alt="Member 5">
+                  <img src="../../assets/images/theron.jpg" alt="Member 5">
                   <h2>CHARLIZE THERON</h2>
                 </div>
               </div>
@@ -56,7 +56,7 @@
             <div class="col-sm-4 col-xs-12">
               <div class="member-box animate--one" data-animate="zoomIn">
                 <div class="member-profile star">
-                  <img src="images/blunt.jpg" alt="Member 6">
+                  <img src="../../assets/images/blunt.jpg" alt="Member 6">
                   <h2>EMILY BLUNT</h2>
                 </div>
               </div>
