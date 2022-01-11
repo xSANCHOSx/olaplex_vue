@@ -18,52 +18,46 @@ $counter++;
 $fp = fopen($file_counter, "w");
 fwrite($fp, $counter);
 fclose($fp);
-$mail =  json_decode(file_get_contents("php://input"), true);
+$mail_obj =  json_decode(file_get_contents("php://input"), true);
 
-file_put_contents('log.log', $mail."\n",FILE_APPEND);
 $subject = "Заказ с сайта Olaplex #". $counter ." (".date("d.m.Y H:i").")";
 
-//$mail = str_replace("<td></td>", "",$mail);
-//$mail = strip_tags($mail, "<b><div><table><tbody><tr><td><html><body><style><h1><th><br>");
-//$mail = preg_replace("/<([a-z][a-z0-9]*)[^>]*?(\/?)>/i",'<$1$2>', $mail);
-//$mail = preg_replace("/<td[^>]*>[\s|&nbsp;]*<\/td>/", "", $mail);
-//$mail = str_replace("Электроня", "Электронная",$mail);
-
-$mail = '<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#93a1a1;border-spacing:0;}
-.tg td{background-color:#fdf6e3;border-color:#93a1a1;border-style:solid;border-width:1px;color:#002b36;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#657b83;border-color:#93a1a1;border-style:solid;border-width:1px;color:#fdf6e3;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-alz1{background-color:#eee8d5;text-align:left;vertical-align:top}
-.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
-</style>';
-$mail .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
-$mail .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>" . strip_tags($_POST['name']) . "</td></tr>";
-$mail .= "<tr><td><strong>ФИО:</strong> </td><td>" . strip_tags($_POST['name']) . "</td></tr>";
-$mail.= "<tr><td><strong>Телефон:</strong> </td><td>" . strip_tags($_POST['phone']) . "</td></tr>";
-$mail .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($_POST['email']) . "</td></tr>";
-$mail .= "<tr><td><strong>Адрес доставки:</strong> </td><td>" . strip_tags($_POST['adress']) . "</td></tr>";
-$mail.= "</table>";
-$mail .= '<table class="tg">
-<thead>
+$mail = '<h2 style="margin-bottom: 20px;text-align: center;">Контактная информация</h2>';
+$mail .= '<table rules="all" style="width: 100%;border: 1px solid grey;" cellpadding="10">';
+$mail .= '<thead>
   <tr>
-    <th class="tg-73oq">Название </th>
-    <th class="tg-73oq">Цена</th>
-    <th class="tg-73oq">Количество</th>
+    <th>ФИО:</th>
+    <th>Телефон:</th>
+    <th>Email:</th>
+    <th>Адрес доставки:</th>
   </tr>
-</thead>
-<tbody>';
-foreach($_POST['products'] as $products){
+</thead>';
+$mail .= "<tr><td>" . $mail_obj['productOrder']['fio'] . "</td>";
+$mail .= "<td>" . $mail_obj['productOrder']['phone'] . "</td>";
+$mail .= "<td>" . $mail_obj['productOrder']['email'] . "</td>";
+$mail .= "<td>" . $mail_obj['productOrder']['adress'] . "</td></tr>";
+$mail .= "</table>";
+$mail .= '<h2 style="margin: 20px auto;text-align: center;">Заказ</h2>';
+$mail .= '<table rules="all" style="width: 100%;border: 1px solid grey;" cellpadding="10">';
+$mail .= '<thead>
+  <tr>
+    <th>Название товара:</th>
+    <th>Цена:</th>
+    <th>Количество:</th>
+  </tr>
+</thead>';
+
+$sum = 0;
+foreach( $mail_obj['productOrder']['products'] as $products){
     $mail .='<tr>';
-    $mail .='<td class="tg-alz1">'. $products['catalog_number'] . $products['name'] . '</td>';
-    $mail .='<td class="tg-alz1">'. $products['price'] . '</td>';
-    $mail .='<td class="tg-alz1">'. $products['quantity']  . '</td>';
+    $mail .='<td>'. $products['catalog_number'] . $products['name'] . '</td>';
+    $mail .='<td>'. $products['price'] . '</td>';
+    $mail .='<td>'. $products['quantity']  . '</td>';
     $mail .='</tr>';
+    $sum += (float) ($products['price']* $products['quantity']);
 }
-$mail .= '</tbody>
-            </table>';
-$mail .= '<div>Общая сумма заказа:' . $products['price']* $products['quantity'] . '</div>';
+$mail .= '</table>';
+$mail .= '<div style="text-align:right; margin:15px 0;font-size: 20px;">Общая сумма заказа: <strong>' . $sum . ' руб. </strong></div>';
 $template = "<html>
 <style>
 *
@@ -120,8 +114,8 @@ $template .= "<hr>
 </table>";
 // Clear form
 
-$head = "<tr><th>Название</th><th>Цена</th><th>Кол-во</th></tr>";
-$template = str_replace ( "<tbody>" ,"<tbody>".$head, $template);
+// $head = "<tr><th>Название</th><th>Цена</th><th>Кол-во</th></tr>";
+// $template = str_replace ( "<tbody>" ,"<tbody>".$head, $template);
 
 $domain = "olaplex.ru";
 $from = "no-reply@". $domain;
