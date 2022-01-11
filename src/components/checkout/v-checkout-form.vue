@@ -9,7 +9,7 @@
       </div>
       <div class="form-group col-xs-12">
         <label for="name-field">ФИО</label>
-        <input type="text" v-model="name" class="form-control" id="name-field" name="name-field" placeholder="ФИО" >
+        <input type="text" v-model="fio" class="form-control" id="name-field" name="name-field" placeholder="ФИО" >
       </div>
 
       <div class="form-group col-xs-12">
@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       errors: [],
-      name: null,
+      fio: null,
       phone: null,
       email: null,
       adress: null,
@@ -51,23 +51,22 @@ export default {
  methods: {
    onSubmit() {
      this.errors = []
-     if(this.name && this.phone && this.email && this.adress) {
-       console.log('отрабатывает');
+     if(this.fio && this.phone && this.email && this.adress) {
      let productOrder = {
-       name: this.name,
+       fio: this.fio,
        phone: this.phone,
        email: this.email,
        adress: this.adress,
        products: this.$store.state.card
      }
      this.$emit('order-submitted', productOrder)
-     this.name = null
+     this.fio = null
      this.phone = null
      this.email = null
      this.adress = null
    } else {
        console.log('не отрабатывает');
-       if(!this.name) this.errors.push("Поле 'Имя' не заполнено.")
+       if(!this.fio) this.errors.push("Поле 'Имя' не заполнено.")
        if(!this.phone) this.errors.push("Поле 'Телефон' не заполнено.")
        if(!this.email) this.errors.push("Поле 'Email' не заполнено.")
        if(!this.adress) this.errors.push("Поле 'Адрес' не заполнено.")

@@ -1,7 +1,11 @@
 <template>
 <div>
+  <v-notification
+      :massages="massages"
+  />
   <vSlider/>
   <vAboutUs/>
+
   <section id="catalog">
 
     <div class="container-fluid">
@@ -28,19 +32,19 @@
 
 import catalog_item from './catalog-item';
 import {mapActions, mapGetters} from 'vuex';
-// import ProductsCard from "./products-card";
-import vSlider from "./main-page/v-slider";
-import vAboutUs from "./main-page/v-about_us";
-import vWork from "./main-page/work-block"
-import vExamples from "./main-page/real-examples"
-import vTestimonials from "./main-page/v-testimonials"
-import vWhoUse from "./main-page/v-who_use"
-import vDelivery from "./main-page/v-delivery"
+import vSlider from "../main-page/v-slider";
+import vAboutUs from "../main-page/v-about_us";
+import vWork from "../main-page/work-block"
+import vExamples from "../main-page/real-examples"
+import vTestimonials from "../main-page/v-testimonials"
+import vWhoUse from "../main-page/v-who_use"
+import vDelivery from "../main-page/v-delivery"
+import vNotification from "../notifications/v-notification"
 
 export default{
     name: "catalog",
     components: {
-      //ProductsCard,
+      vNotification,
       catalog_item,
       vSlider,
       vAboutUs,
@@ -52,7 +56,9 @@ export default{
     },
     props:{},
     data() {
-      return {}
+      return {
+        massages: []
+      }
     },
     metaInfo() {
       const product_title = "Олаплекс (Olaplex) Для Волос Купить В Интернет-Магазине";
@@ -82,11 +88,21 @@ export default{
       ]),
       addToCard (data) {
         this.ADD_TO_CARD(data)
+        .then(()=>{
+          let timeStamp = Date.now().toLocaleString();
+          this.massages.unshift(
+              {
+                name: 'Товар добавлен в корзину',
+                icon: 'check_circle',
+                id: timeStamp
+              }
+          )
+        })
       },
       addToCardInProduct(data){
-        this.ADD_TO_CARD(data);
-      }
-    },
+        this.ADD_TO_CARD(data)
+        }
+      },
   mounted() {
     this.GET_PRODUCTS()
   }

@@ -7,7 +7,7 @@
 import catalogWrapper from './components/main-wrapper'
 <script>
 
-import MainWrapper from "./components/main-wrapper";
+import MainWrapper from "./components/template-part/main-wrapper";
 
 export default {
   name: 'App',

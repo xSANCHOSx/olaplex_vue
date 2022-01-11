@@ -1,7 +1,7 @@
 <template>
           <tr>
             <td class="checkout_img">
-              <img class="card_item__image" :src="require('../assets/images/' + card_item_data.img)">
+              <img class="card_item__image" :src="require('../../assets/images/' + card_item_data.img)">
             </td>
             <td class="checkout_name">
               {{ card_item_data.name }}
@@ -18,7 +18,7 @@
             </td>
           <td class="checkout_delete">
             <div class="card-item__delete" @click="delete_From_Card">
-              <img class="close_btn" src="../assets/images/close.png" alt="close">
+              <img class="close_btn" src="../../assets/images/close.png" alt="close">
             </div>
           </td>
           </tr>

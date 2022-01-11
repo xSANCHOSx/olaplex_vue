@@ -13,6 +13,7 @@
 import VCheckoutForm from "./v-checkout-form";
 import axios from "axios";
 
+
 export default {
   name: "v-checkout",
   components: {
@@ -41,20 +42,25 @@ export default {
   methods:{
 
     addOrder(productOrder) {
-      axios.post(
-          "../php/sendmail.php",
-          productOrder, {
-            headers: {
-              'content-type': 'application/x-www-form-urlencoded'
-            }
-          }
-      ).then(function() {
-        console.log('SUCCESS!!');
-        this.$state.card == [];
+      axios({
+        method: 'post',
+        url: './php/sendmail.php',
+        params: {},
+        data: {
+          productOrder
+        },
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
       })
-          .catch(function() {
-            console.log('FAILURE!!');
-          });
+          .then(function(response) {
+            console.log('Ответ сервера успешно получен!');
+            console.log(response.data);
+          })
+          .catch(function(error) {
+            console.log(error);
+          })
+
     }
   },
 

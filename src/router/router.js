@@ -9,27 +9,27 @@ let routes = [
         {
             path: '/',
             name: 'catalog',
-            component: () => import("../components/catalog")
+            component: () => import("../components/catalog/catalog")
         },
         {
             path: '/cart',
             name: 'cart',
-            component: () => import("../components/card"),
+            component: () => import("../components/card/card"),
             props: true
         },
         {
             path: '/checkout',
             name: 'v-checkout',
-            component: () => import("../components/v-checkout")
+            component: () => import("../components/checkout/v-checkout")
         },
         {  path: '/product/:id',
            name: 'ProductsCard',
-           component: () => import("../components/products-card"),
+           component: () => import("../components/product/products-card"),
            props: true
         },
         {  path: '/:catchAll(.*)',
             name: 'NotFound',
-            component: () =>  import("../components/not-found")
+            component: () =>  import("../components/template-part/not-found")
         }
 
     ]

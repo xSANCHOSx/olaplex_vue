@@ -1,5 +1,8 @@
 <template>
     <div class="card">
+      <v-notification
+          :massages="massages"
+      />
       <h2>Корзина товаров</h2>
       <div class="card__wrap" v-if="card_data.length">
         <div class="card_item">
@@ -62,14 +65,18 @@
 <script>
 import cardItem from './card_item'
 import {mapActions} from "vuex"
+import vNotification from "../notifications/v-notification"
 
 export default{
     name: "card",
     components: {
-      cardItem
+      cardItem,
+      vNotification
     },
      data() {
-        return { }
+        return {
+          massages: []
+        }
     },
   metaInfo() {
     const product_title = "Корзина товаров";
@@ -117,7 +124,17 @@ export default{
         this.DECREMENT_CARD_ITEM(index)
       },
       delete_From_Card(index){
-        this.DELETE_FROM_CARD(index);
+        this.DELETE_FROM_CARD(index)
+        .then(()=>{
+          let timeStamp = Date.now().toLocaleString();
+          this.massages.unshift(
+              {
+                name: 'Товар удален из корзины',
+                icon: 'error',
+                id: timeStamp
+              }
+          )
+        })
       }
 
     },

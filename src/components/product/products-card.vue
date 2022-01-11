@@ -1,5 +1,8 @@
 <template>
   <section class="max-featured" >
+    <v-notification
+        :massages="massages"
+    />
     <div class="max-section-title product">
       <h2><strong>{{prod.catalog_number }}</strong><br />  {{prod.name }}</h2>
     </div>
@@ -8,7 +11,7 @@
         <div class="col-md-2 visible-md visible-lg"></div>
         <div class="col-sm-12 col-md-5 offset-md-1 visible-xs visible-sm">
           <div :class="prod.img_class + '_m' ">
-            <img :src="require('../assets/images/' + prod.img)" alt="">
+            <img :src="require('../../assets/images/' + prod.img)" alt="">
           </div>
         </div>
         <div class="col-sm-12 col-md-5  tovar-name animate--one" data-animate="fadeInDown" data-duration="3">
@@ -23,7 +26,7 @@
         </div>
         <div class="col-sm-12 col-md-5 visible-md visible-lg offset-md-1">
           <div :class="prod.img_class" >
-            <img :src="require('../assets/images/' + prod.img)" alt="">
+            <img :src="require('../../assets/images/' + prod.img)" alt="">
           </div>
         </div>
       </div>
@@ -34,10 +37,14 @@
 
 <script>
 import {mapGetters, mapActions} from "vuex";
+import vNotification from "../notifications/v-notification"
 
 
 export default {
   name: "products-card",
+  components: {
+    vNotification
+  },
   props:{
     prod_data:{
       type: Object,
@@ -49,7 +56,9 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      massages: []
+    }
   },
   metaInfo() {
     const product_title = this.prod.catalog_number + ' ' + this.prod.name;
@@ -80,7 +89,17 @@ export default {
       'GET_PRODUCT_PO_ID'
     ]),
     addToCardInProduct() {
-      this.ADD_TO_CARD(this.prod);
+      this.ADD_TO_CARD(this.prod)
+      .then(()=>{
+        let timeStamp = Date.now().toLocaleString();
+        this.massages.unshift(
+            {
+              name: 'Товар добавлен в корзину',
+              icon: 'check_circle',
+              id: timeStamp
+            }
+        )
+      })
     }
   },
 

@@ -69,15 +69,15 @@ $(window).load(function(){
     });
 });
 $(function() {
-    var videos  = $("#slide1");
+    let videos  = $("#slide1");
 
     videos.on("click", function(){
-        var elm = $(this),
+        let elm = $(this),
             conts   = elm.contents(),
             le      = conts.length,
             ifr     = null;
 
-        for(var i = 0; i<le; i++){
+        for(let i = 0; i<le; i++){
             if(conts[i].nodeType == 8) ifr = conts[i].textContent;
         }
 
@@ -86,15 +86,15 @@ $(function() {
     });
 });
 $(function() {
-    var video2  = $("#slide2");
+    let video2  = $("#slide2");
 
     video2.on("click", function(){
-        var elm2 = $(this),
+        let elm2 = $(this),
             conts2   = elm2.contents(),
             le2      = conts2.length,
             ifr2     = null;
 
-        for(var i = 0; i<le2; i++){
+        for(let i = 0; i<le2; i++){
             if(conts2[i].nodeType == 8) ifr2 = conts2[i].textContent;
         }
 

@@ -21,7 +21,7 @@ fclose($fp);
 
 
 $subject = "Заказ с сайта Olaplex #". $counter ." (".date("d.m.Y H:i").")";
-
+file_put_contents('/log.log', json_encode($_POST) ."\n",FILE_APPEND);
 //$mail = str_replace("<td></td>", "",$mail);
 //$mail = strip_tags($mail, "<b><div><table><tbody><tr><td><html><body><style><h1><th><br>");
 //$mail = preg_replace("/<([a-z][a-z0-9]*)[^>]*?(\/?)>/i",'<$1$2>', $mail);

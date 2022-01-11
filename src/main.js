@@ -7,7 +7,6 @@ import "./assets/styles/flexslider.css"
 import "./assets/fonts/flexslider-icon.ttf"
 import "./assets/fonts/flexslider-icon.woff"
 import "./assets/js/jquery.flexslider-min.js"
-import "./assets/js/main.js"
 import "./assets/js/new.js"
 
 import VueMeta from 'vue-meta'

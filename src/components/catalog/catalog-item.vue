@@ -4,12 +4,12 @@
     <div class="row">
         <div class="col-sm-12 col-md-5 visible-md visible-lg ">
             <div :class="product_data.img_class" >
-              <img :src="require('../assets/images/' + product_data.img)" alt="">
+              <img :src="require('../../assets/images/' + product_data.img)" alt="">
             </div>
         </div>
         <div class="col-sm-12 col-md-5 visible-xs visible-sm">
             <div :class="product_data.img_class + '_m' ">
-              <img :src="require('../assets/images/' + product_data.img)" alt="">
+              <img :src="require('../../assets/images/' + product_data.img)" alt="">
             </div>
         </div>
       <div class="col-sm-12 col-md-5 tovar-name">
@@ -52,7 +52,7 @@
       <div class="col-md-2 visible-md visible-lg"></div>
       <div class="col-sm-12 col-md-5 visible-xs visible-sm">
         <div :class="product_data.img_class + '_m' ">
-          <img :src="require('../assets/images/' + product_data.img)" alt="">
+          <img :src="require('../../assets/images/' + product_data.img)" alt="">
         </div>
       </div>
       <div class="col-sm-12 col-md-5  tovar-name">
@@ -88,7 +88,7 @@
       </div>
       <div class="col-sm-12 col-md-5 visible-md visible-lg">
         <div :class="product_data.img_class">
-          <img :src="require('../assets/images/' + product_data.img)" alt="">
+          <img :src="require('../../assets/images/' + product_data.img)" alt="">
         </div>
       </div>
   </div>

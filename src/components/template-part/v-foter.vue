@@ -10,11 +10,11 @@
         <div class="col-md-9 col-xs-12">
           <nav class="navbar navbar-default ">
             <ul class="nav navbar-nav main">
-              <li><a href="/#max-aboutus-section">Что это?</a></li>
-              <li><a href="/#max-featured-section">Продукция</a></li>
-              <li><a href="/#max-work-section">Как использовать</a></li>
-              <li><a href="delivery.html">Доставка и оплата</a></li>
-              <li><a href="info.html">Справка</a></li>
+              <li><a href='/#max-aboutus-section'>Что это?</a></li>
+              <li><a href='/#catalog'>Продукция</a></li>
+              <li><a href='/#max-work-section'>Как использовать</a></li>
+              <li><a href='delivery.html'>Доставка и оплата</a></li>
+              <li><a href='info.html'>Справка</a></li>
               <li><router-link to="/product/1">No.3 Hair Perfector</router-link></li>
               <li><router-link to="/product/2">No.2 Bond Perfector</router-link></li>
               <li><router-link to="/product/3">No.1 Bond Multiplier</router-link></li>
