@@ -17,9 +17,10 @@ $counter++;
 // Сохраняем обновленное значение счетчика
 $fp = fopen($file_counter, "w");
 fwrite($fp, $counter);
-fclose($fp); 
+fclose($fp);
+$mail =  json_decode(file_get_contents("php://input"), true);
 
-
+file_put_contents('log.log', $mail."\n",FILE_APPEND);
 $subject = "Заказ с сайта Olaplex #". $counter ." (".date("d.m.Y H:i").")";
 
 //$mail = str_replace("<td></td>", "",$mail);
@@ -28,7 +29,7 @@ $subject = "Заказ с сайта Olaplex #". $counter ." (".date("d.m.Y H:i"
 //$mail = preg_replace("/<td[^>]*>[\s|&nbsp;]*<\/td>/", "", $mail);
 //$mail = str_replace("Электроня", "Электронная",$mail);
 
-$mail = '<style type="text/css">
+$mail .= '<style type="text/css">
 .tg  {border-collapse:collapse;border-color:#93a1a1;border-spacing:0;}
 .tg td{background-color:#fdf6e3;border-color:#93a1a1;border-style:solid;border-width:1px;color:#002b36;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
