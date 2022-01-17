@@ -41,6 +41,7 @@ import vWhoUse from "../main-page/v-who_use"
 import vDelivery from "../main-page/v-delivery"
 import vNotification from "../notifications/v-notification"
 
+
 export default{
     name: "catalog",
     components: {
@@ -101,7 +102,8 @@ export default{
       },
       addToCardInProduct(data){
         this.ADD_TO_CARD(data)
-        }
+        },
+
       },
   mounted() {
     this.GET_PRODUCTS()

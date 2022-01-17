@@ -66,6 +66,7 @@ export default {
   }
   .close_btn{
     width: 30px;
+    max-width: 30px;
   }
   .qty_btn{
     cursor: pointer;

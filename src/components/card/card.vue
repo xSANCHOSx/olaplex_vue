@@ -13,7 +13,7 @@
                 <th>Картинка</th>
                 <th>Название</th>
                 <th>Цена</th>
-                <th>Количество</th>
+                <th>К-во</th>
                 <th></th>
               </tr>
               </thead>
@@ -148,7 +148,7 @@ export default{
     min-height: 50vh;
   &__wrap,
   .emtry{
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
   }
   .emtry{

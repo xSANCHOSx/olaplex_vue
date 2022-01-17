@@ -26,12 +26,12 @@
             <ul class="slides">
               <li id="slide1">
                 <img src="../../assets/images/bg.png">
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/NKfTbACBRfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                <iframe width="560" height="315" style="display: none" data-src="https://www.youtube.com/embed/NKfTbACBRfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </li>
 
               <li id="slide2">
                 <img src="../../assets/images/poster.png">
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/NKfTbACBRfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                <iframe width="560" height="315"  style="display: none" data-src="https://www.youtube.com/embed/NKfTbACBRfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </li>
             </ul>
           </div>
@@ -48,6 +48,7 @@
 <script>
 export default {
   name: "v-about_us"
+
 }
 </script>
 

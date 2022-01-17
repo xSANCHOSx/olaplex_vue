@@ -1,6 +1,15 @@
 <template>
   <div class="checkout">
-  <h2>Оформление заказа</h2>
+    <v-popup
+        v-if="isShowPopup"
+        footer_btn="OK"
+        :isCloseIcon= false
+        @closePopup="hideModal"
+    >
+      <h2>Ваше письмо отправлено!</h2>
+      <p>Наш менеджер свяжеться с Вами в близжайшее время!</p>
+    </v-popup>
+    <h2>Оформление заказа</h2>
     <div class="form-block">
       <v-checkout-form
         @order-submitted="addOrder"
@@ -12,16 +21,23 @@
 <script>
 import VCheckoutForm from "./v-checkout-form";
 import axios from "axios";
-
+import {mapActions,} from 'vuex'
+import VPopup from "../popup/v-popup";
 
 export default {
   name: "v-checkout",
   components: {
+    VPopup,
     VCheckoutForm
+
   },
   data() {
     return {
-      name: null
+      name: null,
+      isShowPopup: false,
+      isCloseIcon: true,
+      footer_btn: '',
+      nameModal: ''
     }
   },
   metaInfo() {
@@ -40,7 +56,16 @@ export default {
     }
   },
   methods:{
+    showModal(){
+      this.isShowPopup = true;
+    },
+    hideModal(){
+      this.isShowPopup = false;
 
+    },
+    ...mapActions([
+      'CLEAN_IN_CARD'
+    ]),
     addOrder(productOrder) {
       axios({
         method: 'post',
@@ -54,16 +79,16 @@ export default {
         }
       })
           .then(function(response) {
-            console.log('Ответ сервера успешно получен!');
+            this.CLEAN_IN_CARD();
+            this.showModal();
             console.log(response.data);
           })
           .catch(function(error) {
             console.log(error);
           })
-
+      this.showModal();
     }
-  },
-
+  }
 }
 </script>
 

@@ -46,6 +46,10 @@ const store = new Vuex.Store({
                 state.card[index].quantity--;
             }
         },
+        CLEAN_CARD: (state) =>{
+            state.card = [];
+        },
+
     },
     actions: {
         GET_PRODUCTS({commit}){
@@ -74,6 +78,9 @@ const store = new Vuex.Store({
         },
         DECREMENT_CARD_ITEM({commit}, index){
             commit('DECREMENT', index);
+        },
+        CLEAN_IN_CARD({commit}){
+            commit('CLEAN_CARD')
         }
     },
     getters: {

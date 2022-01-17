@@ -38,6 +38,7 @@ Author: okthemess
 -----------------------------------------------
 */
 html, body {
+  scroll-behavior: smooth;
   /*width: 100%;
   height: 100%;*/
   margin: 0px;
@@ -1447,6 +1448,7 @@ ul.filter > li span {
 
   .navbar-header .collapse, .navbar-toggle {
     display: block !important;
+    margin-right: 5px;
   }
 
   .navbar-header {
@@ -1631,11 +1633,11 @@ ul.filter > li span {
   }
 
   .number {
-    left: 5%;
+    left: 0;
   }
 
   .cart {
-    left: 63%;
+    left: 66%;
   }
 
   #box {
@@ -2113,4 +2115,15 @@ section.slider {
   text-decoration:none;
   color:#000;
   cursor:pointer;
+}
+@media screen and (max-width: 625px){
+  .checkout_img, .card_item th:nth-child(1) {
+    width: 0!important;
+    display: none;
+  }
+  .table-responsive>.table>tbody>tr>td, .table-responsive>.table>tbody>tr>th,
+  .table-responsive>.table>tfoot>tr>td, .table-responsive>.table>tfoot>tr>th,
+  .table-responsive>.table>thead>tr>td, .table-responsive>.table>thead>tr>th {
+    white-space: pre-wrap;
+  }
 }
